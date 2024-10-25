@@ -1,17 +1,17 @@
-//
-//  ToDoAppCoraApp.swift
-//  ToDoAppCora
-//
-//  Created by Berke Cora on 25.10.2024.
-//
 
 import SwiftUI
 
 @main
+
 struct ToDoAppCoraApp: App {
+    
+    @StateObject private var toDoModel = ToDoModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(toDoModel)
+
         }
     }
 }
